@@ -4,6 +4,7 @@ let imagemInimigo;
 
 let cenario;
 let trilhaSonora;
+let somPulo;
 let personagem;
 let inimigo;
 
@@ -12,6 +13,7 @@ function preload(){
     imagemPersonagem = loadImage("assets/imagens/personagem/correndo.png");
     imagemInimigo = loadImage("assets/imagens/inimigos/gotinha.png");
     trilhaSonora = loadSound("assets/sons/trilha_jogo.mp3");
+    somPulo = loadSound("assets/sons/somPulo.mp3");
 }
 
 function setup(){
@@ -25,7 +27,7 @@ function setup(){
 
 function keyPressed(){
     if (key === "ArrowUp"){
-        personagem.pula();
+        personagem.pula(somPulo);
     }
 }
 
@@ -41,6 +43,8 @@ function draw(){
     
     if ( personagem.estaColidindo(inimigo) ) {
         console.log ("Colidiu");
+        
+        //noLoop();
     }
 }
 

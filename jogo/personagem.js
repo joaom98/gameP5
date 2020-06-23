@@ -13,14 +13,16 @@ class Personagem extends Animacao{
         
     }
     
-    pula(){
+    pula(somPulo){
         if ( this.yRender == this.yInicial ) {
             this.velocidadeDoPulo -= 50;
+            somPulo.play(undefined, 1);
         }
         
         else if ( this.doubleJump == 0 ) {
             this.doubleJump++;
             this.velocidadeDoPulo -= 50;
+            somPulo.play(undefined, 2);
         }
         
     }
@@ -40,8 +42,9 @@ class Personagem extends Animacao{
     }
     
     estaColidindo( inimigo ){
-       const colisao = collideRectRect(this.xRender, this.yRender, this.larguraRender, this.alturaRender,
-        inimigo.xRender, inimigo.yRender, inimigo.larguraRender, inimigo.alturaRender);
+       const precisao = 0.7;
+       const colisao = collideRectRect(this.xRender, this.yRender, this.larguraRender * precisao, this.alturaRender * precisao,
+        inimigo.xRender, inimigo.yRender, inimigo.larguraRender * precisao , inimigo.alturaRender * precisao);
         
         return colisao;
     }
