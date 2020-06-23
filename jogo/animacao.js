@@ -3,7 +3,7 @@ class Animacao {
         this.imagem = imagem;
         this.qtdSprites = qtdSprites;
         this.xRender = xRender;
-        this.yRender = height - yRender;
+        this.yRender = height - yRender - 20;
         this.larguraRender = larguraRender;
         this.alturaRender = alturaRender;
         this.larguraSprite = larguraSprite;
