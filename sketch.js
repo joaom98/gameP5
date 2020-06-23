@@ -43,6 +43,10 @@ function draw(){
     
     if ( personagem.estaColidindo(inimigo) ) {
         console.log ("Colidiu");
+        fill(50);
+        personagem.hit();
+        text("Acertos: " + personagem.acertos, 10, 10, 70, 80);
+        
         
         //noLoop();
     }

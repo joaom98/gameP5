@@ -11,6 +11,8 @@ class Personagem extends Animacao{
         this.yInicial = this.yRender;
         this.yRender = this.yInicial;
         
+        this.acertos = 0;
+        
     }
     
     pula(somPulo){
@@ -39,6 +41,10 @@ class Personagem extends Animacao{
         if ( this.yRender == this.yInicial ) {
             this.doubleJump = 0;
         }
+    }
+    
+    hit(){
+        this.acertos++;
     }
     
     estaColidindo( inimigo ){
