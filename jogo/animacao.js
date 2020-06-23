@@ -1,7 +1,7 @@
 class Animacao {
-    constructor( imagem, qualSprite, xRender, yRender, larguraRender, alturaRender, larguraSprite, alturaSprite )  {
+    constructor( imagem, qtdSprites, xRender, yRender, larguraRender, alturaRender, larguraSprite, alturaSprite )  {
         this.imagem = imagem;
-        this.qualSprite = qualSprite;
+        this.qtdSprites = qtdSprites;
         this.xRender = xRender;
         this.yRender = height - yRender;
         this.larguraRender = larguraRender;
@@ -12,8 +12,8 @@ class Animacao {
     }
     
     exibe(){
-        let x = this.frameAtual % 4 * this.larguraSprite;
-        let y = Math.floor(this.frameAtual / 4) * this.alturaSprite;
+        let x = ( this.frameAtual % this.qtdSprites[0] ) * this.larguraSprite;
+        let y = Math.floor(this.frameAtual / this.qtdSprites[0] ) * this.alturaSprite;
         
         image(this.imagem, this.xRender, this.yRender, this.larguraRender, this.alturaRender, x, y, this.larguraSprite, this.alturaSprite);
         
@@ -23,7 +23,8 @@ class Animacao {
     anima(){
         this.frameAtual++;
         
-        this.frameAtual = frameAtual % 15;
+        this.frameAtual = this.frameAtual % ( this.qtdSprites[0] * this.qtdSprites[1] )  ;
+        
         //if (this.frameAtual > 15) {
         //    this.frameAtual = 0;
         //}
