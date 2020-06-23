@@ -25,9 +25,6 @@ class Animacao {
         
         this.frameAtual = this.frameAtual % ( this.qtdSprites[0] * this.qtdSprites[1] )  ;
         
-        //if (this.frameAtual > 15) {
-        //    this.frameAtual = 0;
-        //}
     }
     
 }

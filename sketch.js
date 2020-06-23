@@ -18,7 +18,7 @@ function setup(){
     createCanvas(windowWidth - 20, windowHeight -30);
     cenario = new Cenario(imagemCenario, 20);
     //trilhaSonora.loop();
-    personagem = new Personagem(imagemPersonagem);
+    personagem = new Personagem(imagemPersonagem, [4,4] , 10 , 135, 110, 135, 220, 270);
     inimigo = new Inimigo( imagemInimigo , [4,7] , width - 100 , 52 , 52 , 52, 104, 104);
     frameRate(30);
 }
