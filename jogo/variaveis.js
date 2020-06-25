@@ -25,5 +25,5 @@ let somPulo;
 let personagem;
 
 let telaInicial;
-let cenaAtual = 'jogo';
+let cenaAtual = 'telaInicial';
 let cenas;

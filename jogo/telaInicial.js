@@ -1,14 +1,27 @@
 class TelaInicial {
 
-    constructor(){
+    constructor() {
 
     }
 
-    draw(){
-        this.imagemDeFundo();
+    draw() {
+        this._imagemDeFundo();
+        this._texto();
     }
 
-    imagemDeFundo(){
+    _imagemDeFundo() {
         image(imagemTelaInicial, 0, 0, width, height);
     }
+
+    _texto(){
+        textFont(fonteTelaInicial);
+        textSize(100);
+        textAlign(CENTER);
+        text('Nossa vei ta rodando', width/2, height/2);
+    }
+
+    _botao(){
+        
+    }
+
 }
