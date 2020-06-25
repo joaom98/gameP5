@@ -19,8 +19,14 @@ function setup(){
     
     jogo = new Jogo();
     jogo.setup();
+
+
+    telaInicial = new TelaInicial();
     
-    cenaAtual = 'jogo';
+    cenas = {
+        jogo:jogo,
+        telaInicial:telaInicial
+    };
 
 
     frameRate(30);
@@ -33,9 +39,7 @@ function keyPressed(){
 
 function draw(){
    
-    if ( cenaAtual === 'jogo' ){
-        jogo.draw();
-    }
+    cenas[cenaAtual].draw();
     
     
 }

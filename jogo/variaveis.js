@@ -1,6 +1,8 @@
 let imagemCenario;
 let imagemPersonagem;
 let imagemGameOver;
+let imagemTelaInicial;
+let fonteTelaInicial;
 
 let pontuacao;
 
@@ -22,6 +24,6 @@ let somPulo;
 
 let personagem;
 
-
+let telaInicial;
 let cenaAtual = 'jogo';
 let cenas;

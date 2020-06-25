@@ -6,8 +6,6 @@ class Jogo {
     setup(){
         this.inimigoAtual = 0;
         
-        
-        
         cenario = new Cenario(imagemCenario, 20);
         pontuacao = new Pontuacao();
         trilhaSonora.loop();
