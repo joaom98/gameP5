@@ -1,6 +1,8 @@
 let imagemCenario;
 let imagemPersonagem;
 
+let pontuacao = new Pontuacao();
+
 const inimigos = [];
 
 let imagemInimigo;
@@ -33,6 +35,9 @@ function setup(){
     createCanvas(windowWidth - 20, windowHeight -30);
     cenario = new Cenario(imagemCenario, 20);
     trilhaSonora.loop();
+    
+    
+    
     personagem = new Personagem(imagemPersonagem, [4,16] , 10 , 135, 110, 135, 220, 270);
     
     const inimigo = new Inimigo( imagemInimigo , [4,28] , width - 100 , 52 , 52 , 52, 104, 104, 10, 100);
@@ -60,7 +65,10 @@ function draw(){
     cenario.exibe();
     cenario.move();
     
-    personagem.exibe();
+    pontuacao.exibe();
+    pontuacao.adicionarPontos();
+    
+    personagem.exibe();    
     personagem.aplicaGravidade();
     
     
