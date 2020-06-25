@@ -2,7 +2,7 @@ let imagemCenario;
 let imagemPersonagem;
 let imagemGameOver;
 
-let pontuacao = new Pontuacao();
+let pontuacao;
 
 let inimigoAtual = 0;
 const inimigos = [];
@@ -21,3 +21,7 @@ let trilhaSonora;
 let somPulo;
 
 let personagem;
+
+
+let cenaAtual = 'jogo';
+let cenas;
