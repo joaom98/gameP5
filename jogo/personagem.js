@@ -6,7 +6,7 @@ class Personagem extends Animacao{
         this.velocidadeX = 10;
         this.velocidadeDoPulo = 0;
         
-        this.doubleJump = 0;
+        this.pulos = 0;
         
         this.yInicial = this.yRender;
         this.yRender = this.yInicial;
@@ -21,8 +21,8 @@ class Personagem extends Animacao{
             somPulo.play(undefined, 1);
         }
         
-        else if ( this.doubleJump == 0 ) {
-            this.doubleJump++;
+        else if ( this.pulos < 1 ) {
+            this.pulos++;
             this.velocidadeDoPulo -= 50;
             somPulo.play(undefined, 2);
         }
@@ -39,7 +39,7 @@ class Personagem extends Animacao{
         }
         
         if ( this.yRender == this.yInicial ) {
-            this.doubleJump = 0;
+            this.pulos = 0;
         }
     }
     

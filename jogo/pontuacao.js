@@ -7,11 +7,11 @@ class Pontuacao {
         textAlign(RIGHT);
         fill('#fff');
         textSize(50);
-        text(this.pontos, width - 30, 50);
+        text(parseInt(this.pontos), width - 30, 50);
     }
     
     adicionarPontos(){
-        this.pontos ++;
+        this.pontos += 0.2;
     }
 
 }
