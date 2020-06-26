@@ -1,12 +1,11 @@
 class Animacao {
-    constructor(imagem, qtdSprites, xRender, yRender, larguraRender, alturaRender, larguraSprite, alturaSprite) {
+    constructor(imagem, qtdSprites,frameRate, xRender, yRender, escala, larguraSprite, alturaSprite) {
 
-        this.sprite = new Sprite(imagem, qtdSprites, larguraSprite, alturaSprite);
+        this.sprite = new Sprite(imagem, qtdSprites,frameRate, escala, larguraSprite, alturaSprite);
 
         this.xRender = xRender;
-        this.yRender = height - yRender - 20;
-        this.larguraRender = larguraRender;
-        this.alturaRender = alturaRender;
+        this.yRender = height - yRender - configs.cenario.alturaChao;
+        
         this.gravidade = 6;
 
     }
@@ -14,7 +13,7 @@ class Animacao {
     exibe() {
 
         //image(this.imagem, this.xRender, this.yRender, this.larguraRender, this.alturaRender, x, y, this.larguraSprite, this.alturaSprite);
-        this.sprite.desenhaSprite(this.xRender, this.yRender, this.larguraRender, this.alturaRender)
+        this.sprite.desenhaSprite(this.xRender, this.yRender)
 
         this.anima();
     }

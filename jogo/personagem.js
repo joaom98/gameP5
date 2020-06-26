@@ -1,7 +1,7 @@
 class Personagem extends Animacao {
 
-    constructor(imagem, qtdSprites, xRender, yRender, larguraRender, alturaRender, larguraSprite, alturaSprite) {
-        super(imagem, qtdSprites, xRender, yRender, larguraRender, alturaRender, larguraSprite, alturaSprite);
+    constructor(imagem, qtdSprites,frameRate, xRender, yRender, escala, larguraSprite, alturaSprite) {
+        super(imagem, qtdSprites,frameRate, xRender, yRender, escala, larguraSprite, alturaSprite);
 
         this.velocidadeX = 10;
         this.velocidadeDoPulo = 0;

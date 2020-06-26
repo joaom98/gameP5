@@ -11,14 +11,17 @@ let pontuacao;
 let inimigoAtual = 0;
 const inimigos = [];
 
-let inimigoGota;
-let imagemInimigoGota;
+let inimigoCobra;
+let imagemInimigoCobra;
 
-let inimigoTroll;
-let imagemTroll;
+let inimigoDragao;
+let imagemDragao;
 
-let inimigoVoador;
-let imagemGotaVoadora;
+let inimigoOlho;
+let imagemOlho;
+
+let inimigoCaranguejo;
+let imagemCarangueijo;
 
 let cenario;
 let trilhaSonora;

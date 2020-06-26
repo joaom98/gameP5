@@ -8,25 +8,27 @@ class Jogo {
     setup() {
         this.inimigoAtual = 0;
 
+        frameRate(configs.gerais.frameRate);
+
         cenario = new Cenario(imagemCenario, 20);
         pontuacao = new Pontuacao();
         trilhaSonora.loop();
-
+        
         vida = new Vida(configs.vida.maxima, configs.vida.inicial);
 
-        personagem = new Personagem(imagemPersonagem, [4, 16], 10, 135, 110, 135, 220, 270);
+        personagem = new Personagem(imagemPersonagem, [4, 4], 30, 100, 80, 1, 60, 80);
 
-        const inimigoGota = new Inimigo(imagemInimigoGota, [4, 28], width - 100, 52, 52, 52, 104, 104, 40);
+        const inimigoCobra = new Inimigo(imagemInimigoCobra, [1, 1], 30, width - 100, 52, 1/2, 150, 180, 40);
+        const inimigoDragao = new Inimigo(imagemDragao, [1, 1], 30, width * 2, 200, 1/2, 240, 170, 30);
+        const inimigoOlho = new Inimigo(imagemOlho, [1, 1], 30, width * 2, 200, 1/2, 100, 90, 45);
+        const inimigoCaranguejo = new Inimigo(imagemCaranguejo, [1, 1], 30, width * 2, 200, 1/2, 100, 90, 45);
 
-        const inimigoTroll = new Inimigo(imagemTroll, [5, 28], width * 2, 200, 200, 200, 400, 400, 30);
+        
 
-        const inimigoVoador = new Inimigo(imagemGotaVoadora, [3, 16], width * 2, 200, 100, 75, 200, 150, 45);
-
-        frameRate(30);
-
-        inimigos.push(inimigoGota);
-        inimigos.push(inimigoTroll);
-        inimigos.push(inimigoVoador);
+        inimigos.push(inimigoCobra);
+        inimigos.push(inimigoDragao);
+        inimigos.push(inimigoOlho);
+        inimigos.push(inimigoCaranguejo);
 
 
     }

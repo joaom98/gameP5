@@ -1,7 +1,13 @@
 {
+    "gerais": {
+        "frameRate": 60
+    },
     "vida": {
         "maxima": 5,
         "inicial": 5
+    },
+    "cenario": {
+        "alturaChao" : 20
     },
     "mapa": [
         {
@@ -19,6 +25,10 @@
         {
             "inimigo": 2,
             "velocidade": 40
+        },
+        {
+            "inimigo": 3,
+            "velocidade": 20
         }
     ]
 }

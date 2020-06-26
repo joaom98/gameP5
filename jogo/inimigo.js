@@ -1,6 +1,6 @@
 class Inimigo extends Animacao {
-    constructor(imagem, qtdSprites, xRender, yRender, larguraRender, alturaRender, larguraSprite, alturaSprite, velocidadeX) {
-        super(imagem, qtdSprites, xRender, yRender, larguraRender, alturaRender, larguraSprite, alturaSprite);
+    constructor(imagem, qtdSprites,frameRate, xRender, yRender, escala, larguraSprite, alturaSprite, velocidadeX) {
+        super(imagem, qtdSprites,frameRate, xRender, yRender, escala, larguraSprite, alturaSprite);
         this.velocidadeX = velocidadeX;
     }
 
@@ -9,8 +9,7 @@ class Inimigo extends Animacao {
     }
 
     estaVisivel() {
-        return (this.xRender < -this.larguraRender);
-        //return (this.xRender > 0);
+        return (this.xRender < -this.sprite.larguraRender());
     }
 
     aparece() {

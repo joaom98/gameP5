@@ -15,7 +15,7 @@ function setup() {
     };
 
 
-    frameRate(30);
+    
 
 }
 
