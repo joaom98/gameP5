@@ -3,6 +3,7 @@ let imagemPersonagem;
 let imagemGameOver;
 let imagemTelaInicial;
 let fonteTelaInicial;
+let botaoGerenciador;
 
 let pontuacao;
 

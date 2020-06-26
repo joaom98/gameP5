@@ -7,6 +7,7 @@ class TelaInicial {
     draw() {
         this._imagemDeFundo();
         this._texto();
+        this._botao;
     }
 
     _imagemDeFundo() {
@@ -21,7 +22,8 @@ class TelaInicial {
     }
 
     _botao(){
-        
+        botaoGerenciador.y = height / 7 * 5;
+        botaoGerenciador.draw();
     }
 
 }
