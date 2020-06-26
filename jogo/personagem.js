@@ -13,6 +13,8 @@ class Personagem extends Animacao {
 
         this.acertos = 0;
 
+        this.invencibilidade = false;
+
     }
 
     pula(somPulo) {
@@ -47,7 +49,19 @@ class Personagem extends Animacao {
         this.acertos++;
     }
 
+    tornarInvencivel(){
+        this.invencibilidade = true;
+        setTimeout(() => {
+            this.invencibilidade = false;
+        }, 1000)
+    }
+
     estaColidindo(inimigo) {
+
+        if ( this.invencibilidade ){
+            return false;
+        }
+
         const precisao = 0.7;
         const colisao = collideRectRect(this.xRender, this.yRender, this.larguraRender * precisao, this.alturaRender * precisao,
             inimigo.xRender, inimigo.yRender, inimigo.larguraRender * precisao, inimigo.alturaRender * precisao);

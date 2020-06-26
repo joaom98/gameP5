@@ -8,6 +8,7 @@ function preload() {
     imagemInimigoGota = loadImage("assets/imagens/inimigos/gotinha.png");
     imagemTroll = loadImage("assets/imagens/inimigos/troll.png");
     imagemGotaVoadora = loadImage("assets/imagens/inimigos/gotinha-voadora.png");
+    imagemVida = loadImage("assets/imagens/assets/coracao.png");
 
 
     trilhaSonora = loadSound("assets/sons/trilha_jogo.mp3");

@@ -1,6 +1,7 @@
 let imagemCenario;
 let imagemPersonagem;
 let imagemGameOver;
+let imagemVida;
 let imagemTelaInicial;
 let fonteTelaInicial;
 let botaoGerenciador;
@@ -24,7 +25,8 @@ let trilhaSonora;
 let somPulo;
 
 let personagem;
+let vida;
 
 let telaInicial;
-let cenaAtual = 'telaInicial';
+let cenaAtual = 'jogo';
 let cenas;
