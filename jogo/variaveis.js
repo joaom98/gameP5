@@ -30,3 +30,5 @@ let vida;
 let telaInicial;
 let cenaAtual = 'jogo';
 let cenas;
+
+let configs;

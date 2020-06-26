@@ -1,24 +1,8 @@
 class Jogo {
     constructor() {
         this.indice = 0;
-        this.mapa = [
-            {
-                inimigo: 0,
-                velocidade: 10
-            },
-            {
-                inimigo: 1,
-                velocidade: 30
-            },
-            {
-                inimigo: 1,
-                velocidade: 15
-            },
-            {
-                inimigo: 2,
-                velocidade: 40
-            }
-        ]
+        this.mapa = configs.mapa;
+
     }
 
     setup() {
@@ -28,7 +12,7 @@ class Jogo {
         pontuacao = new Pontuacao();
         trilhaSonora.loop();
 
-        vida = new Vida(4, 4);
+        vida = new Vida(configs.vida.maxima, configs.vida.inicial);
 
         personagem = new Personagem(imagemPersonagem, [4, 16], 10, 135, 110, 135, 220, 270);
 
