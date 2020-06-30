@@ -56,9 +56,8 @@ class Personagem extends Animacao {
             return false;
         }
 
-        const precisao = 0.7;
-        const colisao = collideRectRect(this.xRender, this.yRender, this.larguraRender * precisao, this.alturaRender * precisao,
-            inimigo.xRender, inimigo.yRender, inimigo.larguraRender * precisao, inimigo.alturaRender * precisao);
+        const colisao = collideRectRect(this.xRender, this.yRender, this.sprite.larguraRender() , this.sprite.alturaRender() ,
+            inimigo.xRender, inimigo.yRender, inimigo.sprite.larguraRender() , inimigo.sprite.alturaRender());
 
         return colisao;
     }

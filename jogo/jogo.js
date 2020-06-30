@@ -13,17 +13,17 @@ class Jogo {
         cenario = new Cenario(imagemCenario, 10);
         pontuacao = new Pontuacao();
         trilhaSonora.loop();
-        
+
         vida = new Vida(configs.vida.maxima, configs.vida.inicial);
 
         personagem = new Personagem(imagemPersonagem, [4, 4], 10, 100, 0, 1, 60, 80);
 
-        const inimigoCobra = new Inimigo(imagemInimigoCobra, [1, 1], 30, width - 100, 0, 1/2, 150, 180, 20);
-        const inimigoDragao = new Inimigo(imagemDragao, [1, 1], 30, width * 2, 200, 1/2, 240, 170, 15);
-        const inimigoOlho = new Inimigo(imagemOlho, [1, 1], 30, width * 2, 200, 1/2, 100, 90, 23);
-        const inimigoCaranguejo = new Inimigo(imagemCaranguejo, [1, 1], 30, width * 2, 0, 1/2, 100, 90, 23);
+        const inimigoCobra = new Inimigo(imagemInimigoCobra, [1, 1], 30, width - 100, 0, 1 / 2, 150, 180, 20);
+        const inimigoDragao = new Inimigo(imagemDragao, [1, 1], 30, width * 2, 200, 1 / 2, 240, 170, 15);
+        const inimigoOlho = new Inimigo(imagemOlho, [1, 1], 30, width * 2, 200, 1 / 2, 100, 90, 23);
+        const inimigoCaranguejo = new Inimigo(imagemCaranguejo, [1, 1], 30, width * 2, 0, 1 / 2, 100, 90, 23);
 
-        
+
 
         inimigos.push(inimigoCobra);
         inimigos.push(inimigoDragao);
@@ -60,25 +60,28 @@ class Jogo {
         inimigo.move();
 
 
-        if ( inimigo.estaVisivel() ) {
+        if (inimigo.estaVisivel()) {
             this.indice++;
             inimigo.aparece();
 
-            if (this.indice > this.mapa.length - 1 ) {
+            if (this.indice > this.mapa.length - 1) {
                 this.indice = 0;
             }
+
+
         }
 
         if (personagem.estaColidindo(inimigo)) {
-            
-            fill(50);
+
+            console.log("Colidiu")
             vida.perdeVida();
             personagem.tornarInvencivel();
 
-            if ( vida.vidas === 0 ) {
+            if (vida.vidas === 0) {
                 image(imagemGameOver, width / 2 - 200, height / 3);
                 noLoop();
             }
+
 
         }
 
