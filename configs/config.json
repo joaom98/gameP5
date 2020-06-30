@@ -1,5 +1,7 @@
 {
     "gerais": {
+        "tamanhoTelaX":1100,
+        "tamanhoTelaY":600,
         "frameRate": 60
     },
     "vida": {
@@ -12,23 +14,23 @@
     "mapa": [
         {
             "inimigo": 0,
-            "velocidade": 10
-        },
-        {
-            "inimigo": 1,
-            "velocidade": 30
+            "velocidade": 5
         },
         {
             "inimigo": 1,
             "velocidade": 15
         },
         {
+            "inimigo": 1,
+            "velocidade": 8
+        },
+        {
             "inimigo": 2,
-            "velocidade": 40
+            "velocidade": 20
         },
         {
             "inimigo": 3,
-            "velocidade": 20
+            "velocidade": 10
         }
     ]
 }

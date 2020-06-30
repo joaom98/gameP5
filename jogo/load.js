@@ -1,5 +1,5 @@
 function preload() {
-    imagemCenario = loadImage("assets/imagens/cenario/floresta.png");
+    imagemCenario = loadImage("meusAssets/cenario/fundo.png");
     imagemGameOver = loadImage("assets/imagens/assets/game-over.png");
     imagemTelaInicial = loadImage("assets/imagens/assets/telaInicial.png");
     fonteTelaInicial = loadFont("assets/imagens/assets/fonteTelaInicial.otf");
@@ -9,7 +9,7 @@ function preload() {
     imagemDragao = loadImage("meusAssets/inimigos/dragao.png");
     imagemOlho = loadImage("meusAssets/inimigos/dragao.png");
     imagemCaranguejo = loadImage("meusAssets/inimigos/caranguejo.png");
-    imagemVida = loadImage("assets/imagens/assets/coracao.png");
+    imagemVida = loadImage("meusAssets/ui/coracao.png");
 
     configs = loadJSON("configs/config.json");
 

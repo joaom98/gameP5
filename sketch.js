@@ -1,5 +1,5 @@
 function setup() {
-    createCanvas(windowWidth - 20, windowHeight - 30);
+    createCanvas(configs.gerais.tamanhoTelaX, configs.gerais.tamanhoTelaY);
     cenario = new Cenario(imagemCenario, 20);
 
     jogo = new Jogo();

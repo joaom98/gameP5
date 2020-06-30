@@ -19,9 +19,18 @@ class Sprite {
         let x = (this.frameAtual % this.qtdSprites[0]) * this.larguraSprite;
         let y = Math.floor(this.frameAtual / this.qtdSprites[0]) * this.alturaSprite;
 
-        image(this.imagem, xRender, yRender, this.larguraSprite * this.escala, this.alturaSprite * this.escala, x, y, this.larguraSprite, this.alturaSprite);
+        image(this.imagem, xRender, yRender,
+            this.larguraSprite * this.escala,
+            this.alturaSprite * this.escala,
+            x, y, this.larguraSprite, this.alturaSprite);
 
     }
+
+
+    alturaRender(){
+        return this.alturaSprite * this.escala;
+    }
+
 
     larguraRender(){
         return this.larguraSprite * this.escala;

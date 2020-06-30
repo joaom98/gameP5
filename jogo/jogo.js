@@ -10,18 +10,18 @@ class Jogo {
 
         frameRate(configs.gerais.frameRate);
 
-        cenario = new Cenario(imagemCenario, 20);
+        cenario = new Cenario(imagemCenario, 10);
         pontuacao = new Pontuacao();
         trilhaSonora.loop();
         
         vida = new Vida(configs.vida.maxima, configs.vida.inicial);
 
-        personagem = new Personagem(imagemPersonagem, [4, 4], 30, 100, 80, 1, 60, 80);
+        personagem = new Personagem(imagemPersonagem, [4, 4], 10, 100, 0, 1, 60, 80);
 
-        const inimigoCobra = new Inimigo(imagemInimigoCobra, [1, 1], 30, width - 100, 52, 1/2, 150, 180, 40);
-        const inimigoDragao = new Inimigo(imagemDragao, [1, 1], 30, width * 2, 200, 1/2, 240, 170, 30);
-        const inimigoOlho = new Inimigo(imagemOlho, [1, 1], 30, width * 2, 200, 1/2, 100, 90, 45);
-        const inimigoCaranguejo = new Inimigo(imagemCaranguejo, [1, 1], 30, width * 2, 200, 1/2, 100, 90, 45);
+        const inimigoCobra = new Inimigo(imagemInimigoCobra, [1, 1], 30, width - 100, 0, 1/2, 150, 180, 20);
+        const inimigoDragao = new Inimigo(imagemDragao, [1, 1], 30, width * 2, 200, 1/2, 240, 170, 15);
+        const inimigoOlho = new Inimigo(imagemOlho, [1, 1], 30, width * 2, 200, 1/2, 100, 90, 23);
+        const inimigoCaranguejo = new Inimigo(imagemCaranguejo, [1, 1], 30, width * 2, 0, 1/2, 100, 90, 23);
 
         
 

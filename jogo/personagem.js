@@ -11,8 +11,6 @@ class Personagem extends Animacao {
         this.yInicial = this.yRender;
         this.yRender = this.yInicial;
 
-        this.acertos = 0;
-
         this.invencibilidade = false;
 
     }
@@ -43,10 +41,6 @@ class Personagem extends Animacao {
         if (this.yRender == this.yInicial) {
             this.pulos = 0;
         }
-    }
-
-    hit() {
-        this.acertos++;
     }
 
     tornarInvencivel(){

@@ -4,7 +4,7 @@ class Animacao {
         this.sprite = new Sprite(imagem, qtdSprites,frameRate, escala, larguraSprite, alturaSprite);
 
         this.xRender = xRender;
-        this.yRender = height - yRender - configs.cenario.alturaChao;
+        this.yRender = height - yRender - this.sprite.alturaRender() - configs.cenario.alturaChao;
         
         this.gravidade = 6;
 
