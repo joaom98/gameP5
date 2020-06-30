@@ -4,10 +4,10 @@ class BotaoGerenciador{
         this.x = x;
         this.y = y;
 
-        this.botao = createButton(this.texto);
-        this.botao.mousePressed( () => this._alteraCena() );
+        //this.botao = createButton(this.texto);
+        //this.botao.mousePressed( () => this._alteraCena() );
 
-        this.botao.addClass('botao-tela-inicial');
+        //this.botao.addClass('botao-tela-inicial');
     }
 
     draw(){

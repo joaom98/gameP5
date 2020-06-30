@@ -7,23 +7,34 @@ class TelaInicial {
     draw() {
         this._imagemDeFundo();
         this._texto();
-        this._botao;
+        //this._botao;
     }
 
     _imagemDeFundo() {
-        image(imagemTelaInicial, 0, 0, width, height);
+        
+        background(0, 0, 0);
+        //image(imagemTelaInicial, 0, 0, width, height);
     }
 
     _texto(){
-        textFont(fonteTelaInicial);
-        textSize(100);
+        textFont(fonteAtari);
+        textSize(50);
         textAlign(CENTER);
-        text('Nossa vei ta rodando', width/2, height/2);
+        fill(255,255,255);
+        text('Skullman Adventures', width/2, height/2);
+        textSize(30);
+        text('Press Up', width/2, height/2 + 100);
     }
 
-    _botao(){
-        botaoGerenciador.y = height / 7 * 5;
-        botaoGerenciador.draw();
+
+    teclar(key) {
+        if (key === "ArrowUp") {
+            this._alteraCena();
+        }
+    }
+
+    _alteraCena(){
+        cenaAtual = 'jogo';
     }
 
 }

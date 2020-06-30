@@ -10,9 +10,11 @@ class Jogo {
 
         frameRate(configs.gerais.frameRate);
 
+        trilhaSonora.loop();
+
         cenario = new Cenario(imagemCenario, 10);
         pontuacao = new Pontuacao();
-        trilhaSonora.loop();
+        
 
         vida = new Vida(configs.vida.maxima, configs.vida.inicial);
 
@@ -42,6 +44,8 @@ class Jogo {
     draw() {
         cenario.exibe();
         cenario.move();
+
+
 
         pontuacao.exibe();
         pontuacao.adicionarPontos();
@@ -78,7 +82,12 @@ class Jogo {
             personagem.tornarInvencivel();
 
             if (vida.vidas === 0) {
-                image(imagemGameOver, width / 2 - 200, height / 3);
+
+                textFont(fonteAtari);
+                textSize(100);
+                textAlign(CENTER);
+                text('Game Over', width/2, height/2);
+                //image(imagemGameOver, width / 2 - 200, height / 3);
                 noLoop();
             }
 

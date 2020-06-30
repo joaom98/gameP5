@@ -21,6 +21,8 @@ function setup() {
 
 function keyPressed() {
     jogo.teclar(key);
+    telaInicial.teclar(key);
+
 }
 
 function draw() {
